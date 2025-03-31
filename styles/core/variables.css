@@ -1,0 +1,70 @@
+:root {
+    /* color variables */
+    --primary-light: #e6f0ff;
+    --primary-regular: #4d94ff;  
+    --primary--regular-dark: #0052cc;
+    --primary-dark: #0b2b44;  
+    --secondary-green: #00cc99;
+    
+    --white: #ffffff;
+    --gray-100: #f8f9fa;         
+    --gray-500: #adb5bd;
+    --gray-800: #343a40;
+    --black: #000000;
+    
+    --text-primary: #0b2b44;
+    --text-inverse: var(--white);
+    --text-muted: var(--gray-500);
+    
+    --bg-primary: var(--white);
+    --bg-light: var(--primary-light);
+    --bg-dark: var(--gray-800);
+    
+    --btn-primary: var(--primary-dark);
+    --btn-primary-hover: var(--secondary-green);
+    --btn-secondary: var(--secondary-green);
+    --btn-secondary-hover: var(--primary-dark);
+
+    /* font variables */
+    --font-main: "Poppins", sans-serif;
+    --font-secondary: "Open Sans", sans-serif;
+
+    /* font weights */
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+  
+    /* font sizes */
+    --text-xs:   0.75rem;   
+    --text-sm:   0.875rem;  
+    --text-base: 1rem;      
+    --text-md:   1.125rem;  
+    --text-lg:   1.25rem;   
+    --text-xl:   1.5rem;    
+    --text-2xl:  1.875rem;  
+    --text-3xl:  2.25rem;   
+    --text-4xl:  3rem;
+    --text-5xl:  3.5rem; 
+
+    /* line heights */
+    --line-tight: 1.25;
+    --line-normal: 1.5;
+    --line-loose: 1.75;
+
+    /* break points */
+    /* mobile to large desktop */
+    --bp-sm: 640px;    
+    --bp-md: 768px;    
+    --bp-lg: 1024px;  
+    --bp-xl: 1280px;   
+    --bp-2xl: 1536px;  
+
+    /* contianer */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-padding: 1rem;
+  }

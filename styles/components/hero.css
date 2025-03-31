@@ -1,0 +1,123 @@
+.hero {
+  position: relative;
+  height: auto;
+  margin-bottom: 5rem;
+  .design-graphic {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    z-index: -1;
+  }
+
+  .flex {
+    height: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-cta {
+    margin: .5rem 0;
+    a {
+        margin: 0.3rem;
+    }
+  }
+  .hero-content {
+    
+    h1 {
+        font-family: var(--font-main);
+        font-size: var(--text-5xl);
+        font-weight: var(--fw-semibold);
+        color: var(--text-primary);
+        line-height: var(--line-tight);
+    }
+    p {
+        font-size: var(--text-lg);
+        color: var(--gray-800);
+        margin: 2rem 0;
+    }
+    img {
+        margin-bottom: 1.5rem;
+    }
+  }
+  .hero-image {
+    img {
+        height: auto;
+        width: 110rem;
+    }
+  }
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -32%; 
+  left: 40%;
+  width: 75vw;
+  height: 90vh; 
+  background: url("../../assets/images/vector1.png") no-repeat center top / cover;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1800px) {
+    .hero::before {
+      left: 37%;
+    }
+  }
+
+  @media screen and (max-width: 1367px) {
+   .design-graphic {
+    display: none;
+   }
+  }
+
+@media screen and  (max-width: 1225px) {
+    .hero {
+        position: static;
+        height: 70vh;
+        margin-bottom: 3rem;
+    }
+  .hero::before {
+    display: none;
+  }
+  
+  .hero-content {
+    width: 80%;
+    text-align: center;
+  }
+  .hero-image {
+    img {
+        height: auto;
+        margin: 0 0;
+        width: 80%!important;
+        
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .flex {
+        display: block;
+      }
+      .gap-2xl {
+        gap: 0;
+      }
+    .hero-content {
+        width: 100%;
+        margin-bottom: 0;
+        img {
+            margin: 0 auto!important;
+            width: 100px;
+        }
+    }
+    .hero-image {
+        img {
+            margin: 2rem auto;
+        }
+    }
+}

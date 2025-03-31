@@ -1,0 +1,122 @@
+#main-header {
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: -3rem;
+   background-color: transparent;
+   .main-nav {
+        width: 60%;
+        justify-content: space-evenly;
+        transition: max-height 0s ease, opacity 0.4s ease;
+    }
+    .logo  {
+        margin-top: -1.5rem;
+    }
+    .flex {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .hamburger {
+        display: none; 
+        position: relative;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 21px;
+        z-index: 1000; 
+    }
+    
+    .hamburger span {
+        display: block;
+        height: 3px;
+        background: var(--primary-dark); 
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+    
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }    
+}
+
+@media screen and (max-width: 1225px) {
+    #main-header {
+       position: relative;
+       margin-bottom: 3rem;
+       margin-top: 0;
+       .logo {
+        margin-top: -5rem;
+       }
+       .flex {
+            text-align: left;
+        }
+       .hamburger {
+            display: flex;
+            margin-top: -6rem;
+        }
+    }
+   .main-nav {
+       opacity: 0;
+       position: absolute;
+       top: 30%;
+       transform: translateY(-10px);
+       max-height: 0;
+       flex-direction: column !important;
+       overflow: hidden;
+   } 
+   .main-nav.active {
+        opacity: 1;
+        max-height: 500px;
+        width: 100%;
+        visibility: visible;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        color: var(--primary-dark);
+        top: 40%;
+        transform: translateY(0);
+        width: 100%!important;
+        background-color: white; 
+        padding: 1rem;
+        li {
+            font-weight: var(--fw-semibold);
+            width: 100%;
+            padding: .5rem;
+            &:hover {
+                background-color: var(--secondary-green);
+                color: var(--white);
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    #main-header .flex {
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-between;
+        text-align: initial; 
+   }
+  
+   #main-header .logo {
+        margin-top: -5rem;
+        z-index: 1000;
+   }
+   
+   #main-header .main-nav {
+        top: 90%;
+   }
+   
+   #main-header .hamburger {
+        margin-top: -7rem;
+        margin-left: 90%; 
+   }
+}
