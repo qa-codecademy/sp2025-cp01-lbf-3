@@ -1,12 +1,17 @@
 #main-header {
+    top: 0;
     color: var(--white);
     padding: 2rem 0;
     margin-top: -3rem;
    background-color: transparent;
    .main-nav {
-        width: 60%;
-        justify-content: space-evenly;
-        transition: max-height 0s ease, opacity 0.4s ease;
+        width: 75%;
+        justify-content: space-evenly !important;
+        transition: all 0.4s ease;
+        transition: transform 0.4s ease-in-out;
+        .link-active {
+            border-bottom: 2px solid var(--white);
+        }
     }
     .logo  {
         margin-top: -1.5rem;
@@ -49,22 +54,40 @@
 
 @media screen and (max-width: 1225px) {
     #main-header {
-       position: relative;
+        max-width: 100%;
+       position: sticky;
        margin-bottom: 3rem;
        margin-top: 0;
+       top: 0;
+       background-color: white;
+       z-index: 1500;
        .logo {
         margin-top: -5rem;
        }
+       .container {
+        background-color: white;
+       }
        .flex {
+            background-color: white;
             text-align: left;
+            .main-nav {
+                margin-top: 2.5rem;
+            }
         }
        .hamburger {
             display: flex;
-            margin-top: -6rem;
+            margin-top: -7rem
+        }
+        .main-nav {
+            .link-active {
+            border-bottom: 2px solid var(--primary-dark);
+            }  
         }
     }
    .main-nav {
+        background-color: white;
        opacity: 0;
+       width: 90%;
        position: absolute;
        top: 30%;
        transform: translateY(-10px);
@@ -75,20 +98,21 @@
    .main-nav.active {
         opacity: 1;
         max-height: 500px;
-        width: 100%;
+        width: 90%;
+        left: 2%;
         visibility: visible;
         display: flex;
         flex-direction: column;
         position: absolute;
         color: var(--primary-dark);
-        top: 40%;
+        top: 15%;
         transform: translateY(0);
-        width: 100%!important;
         background-color: white; 
         padding: 1rem;
+        overflow-x: hidden;
         li {
             font-weight: var(--fw-semibold);
-            width: 100%;
+            width: 90%;
             padding: .5rem;
             &:hover {
                 background-color: var(--secondary-green);
@@ -98,12 +122,28 @@
     }   
 }
 
+@media screen and (max-width: 933px)  {
+    .hamburger {
+        justify-self: flex-end;
+    }
+    #main-header {
+        .flex {
+            .main-nav.active {
+                top: 45%;
+                left: 5%;
+             }
+        }
+    }
+    
+}
+
 @media screen and (max-width: 768px) {
     #main-header .flex {
         flex-direction: row; 
         align-items: center;
         justify-content: space-between;
         text-align: initial; 
+        width: 90%;
    }
   
    #main-header .logo {
@@ -112,11 +152,11 @@
    }
    
    #main-header .main-nav {
-        top: 90%;
+        top: 35%;
    }
    
    #main-header .hamburger {
-        margin-top: -7rem;
+        margin-top: -6.5rem;
         margin-left: 90%; 
    }
 }

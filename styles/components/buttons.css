@@ -13,6 +13,36 @@
     background-color: var(--btn-secondary);
 }
 
+.btn-pages {
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: var(--primary-dark);
+        box-shadow: 0 0 6px 6px rgba(11, 43, 68, 0.1),             
+        0 2px 0 rgba(11, 43, 68, 0.1);
+        background-color: var(--btn-primary);
+    }
+    
+}
+
+#back-to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 1.5rem; 
+    right: 3rem; 
+    z-index: 1599; 
+    background-color: var(--btn-secondary); 
+    color: white; 
+    border: none; 
+    padding: 1rem 1.3rem; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    transition: all .3s ease-in-out
+}
+
+#back-to-top:hover {
+    background-color: #00a37a; 
+}
+
 .btn-main-primary {
     background-color: var(--primary-dark);
     &:hover { 
