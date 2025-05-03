@@ -139,7 +139,8 @@
    } 
    .main-nav.active {
         opacity: 1;
-        max-height: 500px;
+        height: 100vh;
+        max-height: 100vh;
         left: 2.5%;
         width: 95% !important;
         top: 3%;
