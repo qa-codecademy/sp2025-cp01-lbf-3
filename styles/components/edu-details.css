@@ -1,0 +1,107 @@
+/* === Scoped Educational Program Styles === */
+
+.edu-style {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: #1b1b1b;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  max-width: 900px;
+}
+
+.edu-style .container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.edu-style h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00c896;
+}
+
+.edu-style h3 {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Paragraphs */
+.edu-style p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Image Wrapper */
+.edu-style .edu-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.edu-style .edu-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  max-height: 300px;
+}
+
+/* Primary Button */
+.edu-style .btn-main,
+.edu-style .btn-main-secondary {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: #00c896;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.edu-style .btn-main:hover,
+.edu-style .btn-main-secondary:hover {
+  background-color: #00b488;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .edu-style {
+    padding: 1.5rem;
+  }
+
+  .edu-style h1 {
+    font-size: 1.5rem;
+  }
+
+  .edu-style h3 {
+    font-size: 1rem;
+  }
+
+  .edu-style p {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .edu-style {
+    padding: 1rem;
+  }
+
+  .edu-style .edu-image-wrapper img {
+    max-height: 200px;
+  }
+}

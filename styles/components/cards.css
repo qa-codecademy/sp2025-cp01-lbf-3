@@ -1,0 +1,154 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Base Styles === */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0eefc;
+  color: #333;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* === Section Titles === */
+.section-subtitle {
+  color: #00c896;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b1b1b;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* === Card Layout (Shared) === */
+.courses-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0 0.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.course-meta .price {
+  color: #00c896;
+  font-weight: 700;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* === Buttons (Reusable) === */
+.btn,
+.learnmore-btn {
+  background-color: #00c896;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover,
+.learnmore-btn:hover {
+  background-color: #00b488;
+}
+
+.btn:focus,
+.learnmore-btn:focus {
+  outline: none;
+}
+
+/* === Dynamic Program Details Page Styling === */
+#program-details h1,
+#program-details h2,
+#program-details h3 {
+  color: #1b1b1b;
+  margin-bottom: 1rem;
+}
+
+#program-details p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+#program-details img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+#program-details .section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.course-card p {
+  display: -webkit-box;
+  display: box; /* standard syntax (future proof) */
+  -webkit-box-orient: vertical;
+  box-orient: vertical; /* standard syntax */
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* standard syntax (future proof) */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
