@@ -1,17 +1,21 @@
 #main-header {
+    .btn.btn-main-secondary {
+                background-color: var(--btn-secondary);
+            }
     top: 0;
     color: var(--white);
     padding: 2rem 0;
     margin-top: -3rem;
    background-color: transparent;
    .main-nav {
-        width: 73%;
+        width: 72.5%;
         justify-content: space-evenly !important;
         transition: all 0.5s ease;
         transition: transform 0.4s ease-in-out;
         li {
             font-weight: var(--fw-semibold);
             transition: all 0.3s ease-in-out;
+            font-size: var(--text-lg);
         }
         li:hover {
             color: var(--primary-dark)
@@ -19,6 +23,7 @@
         .link-active {
             
             border-bottom: 2px solid var(--primary-dark);
+            
         }
     }
     .logo  {
@@ -62,6 +67,9 @@
 
 @media screen and (max-width: 1225px) {
     #main-header {
+        .btn.btn-main-secondary {
+                background-color: transparent;
+            }
         max-width: 100%;
        position: sticky;
        margin-bottom: 3rem;
@@ -126,7 +134,7 @@
             &:hover {
                 background-color: var(--secondary-green);
                 color: var(--white);
-            }
+            }   
         }
     }   
 }

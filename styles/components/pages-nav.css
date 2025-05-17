@@ -1,7 +1,8 @@
 #main-header {
     background-color: #edeffb !important; 
     color: var(--text-primary);
-    font-weight: var(--fw-bold)
+    font-weight: var(--fw-semibold);
+    font-size: var(--text-lg);
     padding: 2rem 0;
     margin-top: -3rem;
     height: auto;
@@ -52,8 +53,8 @@
         }
    }
    .main-nav {
-    margin-top: 1.5rem;
-        width: 60%;
+        margin-top: 1.5rem;
+        width: 70%;
         justify-content: space-evenly;
         transition: all 0.4s ease;
         transition: transform 0.4s ease;
@@ -139,11 +140,11 @@
    } 
    .main-nav.active {
         opacity: 1;
-        height: 100vh;
+        height: 82.5vh;
         max-height: 100vh;
         left: 2.5%;
         width: 95% !important;
-        top: 3%;
+        top: 5%;
         visibility: visible;
         display: flex;
         flex-direction: column;
@@ -185,6 +186,7 @@
             }
             .main-nav.active {
                      top: 5%;
+                     height: 90vh;
                      transform: translateY(0);
                      border-radius: .3rem;
                      left: 2.5%;
