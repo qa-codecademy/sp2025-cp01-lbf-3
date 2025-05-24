@@ -1,14 +1,12 @@
 #main-header {
-    .btn.btn-main-secondary {
-                background-color: var(--btn-secondary);
-            }
+   margin: 0 auto;
     top: 0;
     color: var(--white);
     padding: 2rem 0;
     margin-top: -3rem;
    background-color: transparent;
    .main-nav {
-        width: 72.5%;
+        width: 71.5%;
         justify-content: space-evenly !important;
         transition: all 0.5s ease;
         transition: transform 0.4s ease-in-out;
@@ -27,7 +25,7 @@
         }
     }
     .logo  {
-        margin-top: -1.5rem;
+        margin-top: -0.5rem;
     }
     .flex {
         align-items: center;
@@ -66,10 +64,10 @@
 }
 
 @media screen and (max-width: 1225px) {
+     a#button.btn-main-secondary {
+            background-color: transparent;
+        }
     #main-header {
-        .btn.btn-main-secondary {
-                background-color: transparent;
-            }
         max-width: 100%;
        position: sticky;
        margin-bottom: 3rem;
@@ -78,7 +76,7 @@
        background-color: white;
        z-index: 1500;
        .logo {
-        margin-top: -5rem;
+        margin-top: -2.5rem;
        }
        .container {
         background-color: white;
@@ -92,7 +90,8 @@
         }
        .hamburger {
             display: flex;
-            margin-top: -7rem
+            margin-top: -4.5rem;
+            margin-right: 1.5rem;
         }
         .main-nav {
             .link-active {
@@ -122,7 +121,7 @@
         flex-direction: column;
         position: absolute;
         color: var(--primary-dark);
-        top: 17%;
+        top: 32%;
         transform: translateY(0);
         background-color: white; 
         padding: 1rem;
@@ -140,9 +139,14 @@
 }
 
 @media screen and (max-width: 933px)  {
+     
     .hamburger {
         justify-self: flex-end;
     }
+    #main-header .hamburger {
+        margin-top: -5rem;
+        margin-right: 1.5rem; 
+   }
     #main-header {
         .flex {
             .main-nav.active {
@@ -155,16 +159,23 @@
 }
 
 @media screen and (max-width: 768px) {
+  
     #main-header .flex {
         flex-direction: row; 
         align-items: center;
         justify-content: space-between;
         text-align: initial; 
         width: 90%;
+        
+   }
+   #main-header {
+    .hamburger {
+        margin-right: 3rem;
+    }
    }
   
    #main-header .logo {
-        margin-top: -5rem;
+        margin-top: -3rem;
         z-index: 1000;
    }
    
@@ -173,7 +184,7 @@
    }
    
    #main-header .hamburger {
-        margin-top: -6.5rem;
-        margin-left: 90%; 
+        margin-top: -5rem;
+        margin-right: 1.5rem;
    }
 }
