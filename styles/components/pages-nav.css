@@ -1,8 +1,8 @@
 #main-header {
     background-color: #edeffb !important; 
     color: var(--text-primary);
-    font-weight: var(--fw-semibold);
-    font-size: var(--text-lg);
+    font-weight: var(--fw-medium);
+    font-size: var(--text-base);
     padding: 2rem 0;
     margin-top: -3rem;
     height: auto;
@@ -155,7 +155,7 @@
         padding: 1rem;
         z-index: 1500;
         li {
-            font-weight: var(--fw-semibold);
+            font-weight: var(--fw-medium);
             width: 100%;
             padding: .5rem;
             &:hover {

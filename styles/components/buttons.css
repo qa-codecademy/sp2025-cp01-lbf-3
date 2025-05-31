@@ -1,16 +1,16 @@
 .btn-main {
     display: inline-block;
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     text-align: center;
     vertical-align: middle;
     padding: 0.875rem 1.85rem;
-    font-size: var(--text-lg);
-    font-weight: var(--fw-medium);
+    font-size: var(--text-base);
     line-height: 1.5;
     transition: all 0.15s ease-in-out; 
     cursor: pointer;
     color: var(--white);
     background-color: var(--btn-secondary);
+    border-radius: .1rem;
 }
 
 .btn-pages {
