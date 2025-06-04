@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const selectedProgram = localStorage.getItem("selectedProgram");
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedProgram = urlParams.get("program");
   const details = programData[selectedProgram];
   const container = document.getElementById("program-details");
 
