@@ -68,10 +68,32 @@
     <div class="programs-graphics-top"></div>
     <main id="main-content">
         <section class="popular-courses-section">
+            <!-- Add sorting and filtering controls -->
+            <div class="program-controls">
+                <div class="sort-filter-container">
+                    <div class="sort-controls">
+                        <label for="sort-select">Сортирај по:</label>
+                        <select id="sort-select" class="form-select">
+                            <option value="default">По основно</option>
+                            <option value="age-asc">Возраст (ниска кон висока)</option>
+                            <option value="age-desc">Возраст (висока кон ниска)</option>
+                        </select>
+                    </div>
+                    <div class="filter-controls">
+                        <label for="filter-age">Филтрирај по возраст:</label>
+                        <select id="filter-age" class="form-select">
+                            <option value="all">Сите возрасти</option>
+                            <option value="6-9">6-9 години</option>
+                            <option value="10-14">10-14 години</option>
+                            <option value="15-18">15-18 години</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
 
             <div class="courses-container">
                 <!-- Card 1 -->
-                <div class="course-card"> 
+                <div class="course-card" data-age="6-9"> 
                     <h3>Мали Креатори</h3>
                     <img src="../assets/images/Edu Cards/mali-kreatori.png" alt="Mali Kreatori">
                     <div class="course-meta">
@@ -92,7 +114,7 @@
                       </a>
                 </div>
                 <!-- Card 2 -->
-                <div class="course-card">
+                <div class="course-card" data-age="10-14">
                     <h3>Идни Основачи</h3>
                     <img src="../assets/images/Edu Cards/idni-osnovaci.png" alt="Idni Osnovaci">
                     <div class="course-meta">
@@ -114,7 +136,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="course-card">
+                <div class="course-card" data-age="15-18">
                     <h3>Мини Стартапџии</h3>
                     <img src="../assets/images/Edu Cards/mini-startapdzii.png" alt="Mini Startapdzii">
                     <div class="course-meta">

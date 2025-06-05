@@ -186,3 +186,17 @@
 .btn-main {
   border-radius: var(--radius-sm);
 }
+
+.btn-main-secondary {
+  background-color: var(--btn-secondary);
+}
+
+.btn-main-secondary:hover {
+  box-shadow: 0 0 6px 6px rgba(11, 43, 68, 0.1), 0 2px 0 rgba(11, 43, 68, 0.1);
+  background-color: var(--btn-primary);
+}
+
+/* Optional: Add extra margin below both buttons for spacing */
+.btn-main + .btn-main {
+  margin-top: 0.75rem;
+}

@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       schedule: `Траење: 4 недели.<br>Сесии: недела, 11:00–12:30 ч.`,
       format: `Физички и далечински.`,
       teacher: `Јана Џеков`,
+      teacherBio: "/html/instructors.html#јана-џеков",
       price: `3000 МКД`,
       image: "../assets/images/Edu Cards/mali-kreatori.png",
     },
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       schedule: `Траење: 4 недели.<br>Сесии: сабота, 11:00–13:00 ч.`,
       format: `Физички и далечински.`,
       teacher: `Елена Хаџи Пецова`,
+      teacherBio: "/html/instructors.html#елена-хаџи-пецова",
       price: `3500 МКД`,
       image: "../assets/images/Edu Cards/idni-osnovaci.png",
     },
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       schedule: `Траење: 4 недели.<br>Сесии: сабота, 13:30–15:30 ч.`,
       format: `Физички и далечински.`,
       teacher: `Виктор Митевски`,
+      teacherBio: "/html/instructors.html#виктор-митевски",
       price: `4000 МКД`,
       image: "../assets/images/Edu Cards/mini-startapdzii.png",
     }
@@ -36,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (details && container) {
     container.innerHTML = `
+
       <h1>${details.title}</h1>
       <div class="edu-image-wrapper">
         <img src="${details.image}" alt="${details.title}" loading="lazy">
@@ -47,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>${details.format}</p>
       <h3>👩‍🏫 Предавач</h3>
       <p>${details.teacher}</p>
+      <a href="${details.teacherBio}" class="btn-main btn-main-secondary" style="margin-bottom:1rem;">Повеќе за предавачот</a>
       <h3>💰 Цена</h3>
       <p>${details.price}</p>
       <a href="/html/contact.html" class="btn-main btn-main-secondary">Запиши се →</a>
@@ -54,4 +59,55 @@ document.addEventListener("DOMContentLoaded", () => {
   } else if (container) {
     container.innerHTML = `<p>Програмата не е пронајдена.</p>`;
   }
+
+  // Sorting and Filtering Functionality
+  const sortSelect = document.getElementById('sort-select');
+  const filterAge = document.getElementById('filter-age');
+  const coursesContainer = document.querySelector('.courses-container');
+  const cards = Array.from(document.querySelectorAll('.course-card'));
+
+  function sortCards(sortValue) {
+    const sortedCards = [...cards].sort((a, b) => {
+      const ageA = a.dataset.age.split('-')[0];
+      const ageB = b.dataset.age.split('-')[0];
+      
+      if (sortValue === 'age-asc') {
+        return parseInt(ageA) - parseInt(ageB);
+      } else if (sortValue === 'age-desc') {
+        return parseInt(ageB) - parseInt(ageA);
+      }
+      return 0;
+    });
+
+    // Clear container and append sorted cards
+    coursesContainer.innerHTML = '';
+    sortedCards.forEach(card => {
+      if (filterAge.value === 'all' || card.dataset.age === filterAge.value) {
+        coursesContainer.appendChild(card);
+      }
+    });
+  }
+
+  function filterCards() {
+    const selectedAge = filterAge.value;
+    cards.forEach(card => {
+      if (selectedAge === 'all' || card.dataset.age === selectedAge) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Event listeners
+  sortSelect.addEventListener('change', () => {
+    sortCards(sortSelect.value);
+  });
+
+  filterAge.addEventListener('change', () => {
+    filterCards();
+    if (sortSelect.value !== 'default') {
+      sortCards(sortSelect.value);
+    }
+  });
 });
