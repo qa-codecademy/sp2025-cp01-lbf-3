@@ -6,7 +6,7 @@
     margin-top: -3rem;
    background-color: transparent;
    .main-nav {
-        width: 71.5%;
+        width: 61%;
         justify-content: space-evenly !important;
         transition: all 0.5s ease;
         transition: transform 0.4s ease-in-out;
