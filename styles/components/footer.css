@@ -10,6 +10,9 @@
 }
 
 #main-footer {
+    #country {
+        margin-left: 1rem;
+    }
     position: relative;
     padding-top: 5rem;
     color: white;
@@ -162,3 +165,12 @@
         }
     }
 }
+
+@media  screen and (min-width: 300px) and (max-width: 1225px) {
+      #main-footer {
+         #country {
+            margin-left: 0;
+        }
+    }
+}
+    
