@@ -1,0 +1,22 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin: 5rem 0;
+    color: var(--text-primary);
+  }
+  .about img {
+    max-width: 300px;
+  }
+  .about-text {
+    font-size: var(--text-lg);
+        color: var(--gray-800);
+    max-width: 700px;
+    text-align: justify;
+  }
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+    }
+  }

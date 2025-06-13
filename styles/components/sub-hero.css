@@ -1,0 +1,25 @@
+.sub-hero {
+    background: linear-gradient(to right, var(--primary-regular),  var(--primary--regular-dark));
+    color: var(--text-primary);
+    text-align: center;
+    padding: 5rem 2rem;
+  }
+  .sub-hero h1 {
+    font-family: var(--font-main);
+        font-size: var(--text-4xl);
+        font-weight: var(--fw-semibold);
+        color: var(--text-primary);
+        line-height: var(--line-tight);
+    margin-bottom: 1rem;
+  }
+  .sub-hero p {
+    font-size: var(--text-lg);
+        color: var(--gray-800);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+  }
+  .sub-hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
