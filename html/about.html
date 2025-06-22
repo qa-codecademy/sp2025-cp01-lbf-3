@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LBF | About</title> 
+    <title>LBF | За нас</title> 
     <link rel="icon" href="../assets/images/favicon-32x32.png" type="image/png">
-    <meta name="description" content="Learn more about the services offered by LBF, including personalized training programs, expert coaching, and community support.">
-    <meta name="keywords" content="LBF, services, training programs, coaching, community support">
+    <meta name="description" content="Learn more about LittleBig Founders, our mission, vision, and why entrepreneurship education is crucial for children's development.">
+    <meta name="keywords" content="LBF, about us, mission, vision, entrepreneurship, children education">
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- font awesome for icons  -->
@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- custom styles -->
      <!-- variables first then reset then layout and components and lastly page specific styles -->
       <link rel="stylesheet" href="../styles/core/variables.css">
@@ -23,9 +25,9 @@
      <link rel="stylesheet" href="../styles/layout/container.css">
      <link rel="stylesheet" href="../styles/components/pages-nav.css">
      <link rel="stylesheet" href="../styles/components/buttons.css">
-     <link rel="stylesheet" href="../styles/components/pages-hero.css">
      <link rel="stylesheet" href="../styles/components/form.css">
      <link rel="stylesheet" href="../styles/components/footer.css">
+     <link rel="stylesheet" href="../styles/components/about.css">
   </head>
   <body>
     <header id="main-header">
@@ -50,18 +52,296 @@
             </ul>
         </div>
         <div class="breadcrumbs-container">
-            <h1>За нас</h1>
+            <h1>За Нас</h1>
             <p class="breadcrumbs">
               <a href="./index.html" >Дома</a> >> <span>За нас</span>
             </p>
         </div>
     </header>
-      <section class="pages-hero">
-        
-      </section>
-      <main id="main-content">
-     
-    </main>
+
+    <!-- Hero Banner Section -->
+    <section class="about-hero">
+        <div class="hero-background">
+            <div class="hero-overlay">
+                <div class="container">
+                    <div class="hero-content" data-aos="fade-up">
+                        <div class="hero-quote">
+                            <h1>"Никогаш не е прерано да се започне со сонување големи соништа."</h1>
+                        </div>
+                        <div class="hero-welcome">
+                            <h2>Во LittleBig Founders создаваме генерации кои сонуваат, истражуваат и иновираат.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-vision-grid">
+                <div class="vision-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h2>🌟 Визија</h2>
+                    <h3>Да ја разбудиме иднината во секое дете.</h3>
+                    <p>Во LittleBig Founders градиме генерација на креативни, самоуверени и одговорни млади луѓе со претприемачки дух.</p>
+                    <p>Преку иновативно учење, реални искуства и етичка употреба на технологија, ги подготвуваме децата да станат лидери на иднината – без разлика на патот што ќе го изберат.</p>
+                </div>
+
+                <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2>🎯 Мисија</h2>
+                    <h3>Простор за учење, создавање и инспирација.</h3>
+                    <p>Нашата мисија е да создадеме средина каде што децата:</p>
+                    <ul>
+                        <li>учат преку игра и пракса,</li>
+                        <li>размислуваат иновативно и претприемачки,</li>
+                        <li>добиваат алатки за финансиска писменост, решавање проблеми и одговорна употреба на АИ.</li>
+                    </ul>
+                    <p>Користиме Монтесори пристап и STEM методологија за да ги поттикнеме на самостојност, тимска работа и откривање на својот потенцијал.</p>
+                    <p>Со поддршка од родители, експерти, ментори и бизнис-заедницата, создаваме платформа што ги подготвува за светот што доаѓа.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Entrepreneurship Section -->
+    <section class="why-entrepreneurship">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Зошто претприемништво?</h2>
+                <p>Откријте зошто претприемничкото образование е клучно за развојот на вашите деца</p>
+            </div>
+
+            <div class="entrepreneurship-accordion">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>🔷 Што е претприемништво?</h3>
+                        <div class="accordion-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Претприемништвото е начин на размислување и дејствување. Им помага на децата да:</p>
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-magic"></i>
+                                </div>
+                                <h4>✨ Иновираат</h4>
+                                <p>Создаваат нови идеи и решенија.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h4>🔍 Препознаваат можности</h4>
+                                <p>Гледаат шанси каде другите гледаат проблеми.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-target"></i>
+                                </div>
+                                <h4>🎯 Преземаат одговорност</h4>
+                                <p>Се осмелуваат да водат, да делуваат и да учат од искуството.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h3>🔷 Зошто за деца и млади?</h3>
+                        <div class="accordion-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>🧠 Креативност и самодоверба</h4>
+                                <p>Децата учат да размислуваат слободно, да веруваат во своите идеи и да ги претвораат во реалност.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <h4>💰 Финансиска писменост</h4>
+                                <p>Разбирање на пари, штедење, буџетирање и одговорно трошење – од млада возраст.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-crown"></i>
+                                </div>
+                                <h4>🌟 Развој на лидерство</h4>
+                                <p>Преку соработка и одлучување, децата градат лидерски вештини и иницијативност.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-sync-alt"></i>
+                                </div>
+                                <h4>🔄 Градење адаптибилност</h4>
+                                <p>Учиме дека грешките се дел од учењето – градиме отпорност и подготвеност за промени.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">
+                        <div class="accordion-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>🔷 Како помагаат програмите?</h3>
+                        <div class="accordion-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="benefits-grid">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h4>💡 Решавање проблеми & критичко размислување</h4>
+                                <p>Децата учат како да ги анализираат предизвиците и да пронајдат креативни решенија.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-hands-helping"></i>
+                                </div>
+                                <h4>🤝 Тимска работа & комуникација</h4>
+                                <p>Работат заедно, споделуваат идеи и учат како да комуницираат јасно и ефективно.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <h4>🎯 Подготовка за кариера</h4>
+                                <p>Развиваат вештини како што се одлучување, лидерство и презентирање – применливи во секоја професија.</p>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4>🚀 Развој на претприемачки менталитет</h4>
+                                <p>Стануваат проактивни, независни и спремни да ја обликуваат својата иднина.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="core-values">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>LittleBig Founders вредности</h2>
+                <p>Нашите основни принципи кои ги водиме секојдневно</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-number">1️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Креативност</h3>
+                    <p>Поттикнуваме децата да размислуваат иновативно и да создаваат нови идеи со самодоверба.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="value-number">2️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Претприемачки дух</h3>
+                    <p>Ги охрабруваме младите да преземаат иницијатива и да ги реализираат своите идеи.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-number">3️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Критичко размислување</h3>
+                    <p>Ги учиме како да анализираат, проценуваат и решаваат проблеми на логичен начин.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="value-number">4️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Самостојност</h3>
+                    <p>Им даваме простор да учат преку искуство и да носат одлуки самостојно.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-number">5️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Финансиска писменост</h3>
+                    <p>Ги воведуваме во светот на пари, буџетирање и одговорно управување со ресурси.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="value-number">6️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Тимска работа</h3>
+                    <p>Учиме како да соработуваат, слушаат и придонесуваат во заеднички цели.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="value-number">7️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Лидерство</h3>
+                    <p>Ги поттикнуваме да бидат лидери, да преземат одговорност и да влијаат позитивно.</p>
+                </div>
+
+                <div class="value-card" data-aos="fade-up" data-aos-delay="450">
+                    <div class="value-number">8️⃣</div>
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Етичко користење на технологија</h3>
+                    <p>Ги подучуваме на одговорна и свесна употреба на дигитални алатки и вештачка интелигенција.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky CTA Section -->
+    <div class="sticky-cta">
+        <div class="container">
+            <a href="./contact.html" class="cta-button">
+                <i class="fas fa-envelope"></i>
+                Контактирај нѐ
+            </a>
+        </div>
+    </div>
+
     <footer id="main-footer">
         <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
             <path class="" d="M421.9,6.5c22.6-2.5,51.5,0.4,75.5,5.3c23.6,4.9,70.9,23.5,100.5,35.7c75.8,32.2,133.7,44.5,192.6,49.7
@@ -105,8 +385,10 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../script//hamburger.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../script/hamburger.js"></script>
     <script src="../script/backToTop.js"></script>
+    <script src="../script/about.js"></script>
     <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </body>
 </html>
