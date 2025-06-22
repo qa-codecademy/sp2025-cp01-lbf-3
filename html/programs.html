@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- custom styles -->
     <!-- variables first then reset then layout and components and lastly page specific styles -->
     <link rel="stylesheet" href="../styles/core/variables.css">
@@ -69,7 +71,7 @@
     <main id="main-content">
         <section class="popular-courses-section">
             <!-- Add sorting and filtering controls -->
-            <div class="program-controls">
+            <div class="program-controls" data-aos="fade-up">
                 <div class="sort-filter-container">
                     <div class="sort-controls">
                         <label for="sort-select">Сортирај по:</label>
@@ -93,7 +95,7 @@
 
             <div class="courses-container">
                 <!-- Card 1 -->
-                <div class="course-card" data-age="6-9"> 
+                <div class="course-card" data-age="6-9" data-aos="fade-up" data-aos-delay="100"> 
                     <h3>Мали Креатори</h3>
                     <img src="../assets/images/Edu Cards/mali-kreatori.png" alt="Mali Kreatori">
                     <div class="course-meta">
@@ -114,7 +116,7 @@
                       </a>
                 </div>
                 <!-- Card 2 -->
-                <div class="course-card" data-age="10-14">
+                <div class="course-card" data-age="10-14" data-aos="fade-up" data-aos-delay="200">
                     <h3>Идни Основачи</h3>
                     <img src="../assets/images/Edu Cards/idni-osnovaci.png" alt="Idni Osnovaci">
                     <div class="course-meta">
@@ -136,7 +138,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="course-card" data-age="15-18">
+                <div class="course-card" data-age="15-18" data-aos="fade-up" data-aos-delay="300">
                     <h3>Мини Стартапџии</h3>
                     <img src="../assets/images/Edu Cards/mini-startapdzii.png" alt="Mini Startapdzii">
                     <div class="course-meta">
@@ -206,9 +208,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../script//hamburger.js"></script>
     <script src="../script/backToTop.js"></script>
     <script src="../script/edu-details.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    </script>
 
     <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
 </body>

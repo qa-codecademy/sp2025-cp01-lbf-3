@@ -36,6 +36,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- custom styles -->
     <!-- variables first then reset then layout and components and lastly page specific styles -->
     <link rel="stylesheet" href="../styles/core/variables.css" />
@@ -91,7 +93,7 @@
         class="design-graphic"
       />
       <div class="container flex gap-2xl">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-right">
           <img src="../assets/images/dots-vector.png" alt="" />
           <h1>Бизнис академија за деца и тинејџери</h1>
           <p>Ние не ја предвидуваме иднината - ние ја создаваме.</p>
@@ -104,14 +106,14 @@
             >
           </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" data-aos="fade-left">
           <img src="../assets/images/home-banner-img.png" alt="" />
         </div>
       </div>
     </section>
     <main id="main-content">
       <!-- Sub Hero Section -->
-      <section class="sub-hero">
+      <section class="sub-hero" data-aos="fade-up">
         <h1>Заедно градиме светла иднина</h1>
         <p>
           Во Little Big Founders, веруваме дека секое дете во себе носи искра
@@ -128,7 +130,7 @@
       <!-- services section -->
        <section id="featured-services">
             <div class="container featured-wrapper">
-            <div class="featured-text">
+            <div class="featured-text" data-aos="fade-up">
                 
                 <!-- <p class="section-subtitle">TEMPORIBUS</p> -->
                 <h2 class="section-title">Истакнати Услуги</h2>
@@ -142,27 +144,27 @@
                 </div>
 
                 <div class="services-grid">
-                    <div class="index-service-card">
+                    <div class="index-service-card" data-aos="fade-up" data-aos-delay="100">
                         <img src="../assets/images/kamp.png" alt="Awesome Teachers">
                         <h3>Кампови</h3>
                         <p>Нашите кампови се авантуристички и едукативни средини каде децата преку игра учат претприемништво, креативност и тимска работа.</p>
                         <a href="services.html" class="read-more">Прочитај Повеќе -></a>
                     </div>
 
-                    <div class="index-service-card special-rodenden-card">
+                    <div class="index-service-card special-rodenden-card" data-aos="fade-up" data-aos-delay="200">
                         <img src="../assets/images/rodenden.png" alt="Global Certificate">
                         <h3>Родендени</h3>
                         <p>Незаборавен роденден исполнет со смеа, игри и креативни активности прилагодени за секое дете.</p>
                         <a href="services.html" class="read-more">Прочитај Повеќе -></a>
 
                     </div>
-                    <div class="index-service-card special-invest-card">
+                    <div class="index-service-card special-invest-card" data-aos="fade-up" data-aos-delay="300">
                         <img src="../assets/images/plan.png" alt="Best Programme">
                 <h3>Детски инвестициски план</h3>
                 <p>Програма што го учи детето да штеди, заработува и инвестира – основа за финансиски паметна иднина.</p>
                 <a href="services.html" class="read-more">Прочитај Повеќе -></a>
                     </div>
-                    <div class="index-service-card">
+                    <div class="index-service-card" data-aos="fade-up" data-aos-delay="400">
                         <img src="../assets/images/kruzok.png" alt="Business Knowledge">
                         <h3>Родителски кружок</h3>
                         <p>Простор каде родителите учат како да бидат најсилна поддршка за своите идни лидери.</p>
@@ -179,8 +181,9 @@
         <img
           src="../assets/images/advance-career-img.png"
           alt="Bright Future Icon"
+          data-aos="fade-right"
         />
-        <div class="about-text">
+        <div class="about-text" data-aos="fade-left">
           <p>
             Во Little Big Founders, веруваме дека секое дете во себе носи искра
             што може да го осветли светот. Преку нашите програми ги охрабруваме
@@ -199,12 +202,14 @@
       </section>
 
       <!-- Programs Section -->
-      <section class="programs">
+      <section class="programs" data-aos="fade-up">
         <h2>Нашите програми</h2>
         <div class="cards">
           <a
             href="/html/edu-programs-details-page.html?program=mali-kreatori"
             class="card"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
             <h3>МАЛИ КРЕАТОРИ</h3>
             <p>Клуб за деца (6 - 9 г.)</p>
@@ -212,6 +217,8 @@
           <a
             href="/html/edu-programs-details-page.html?program=idni-osnovaci"
             class="card"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             <h3>ИДНИ ОСНОВАЧИ</h3>
             <p>Клуб за деца (10 - 14 г.)</p>
@@ -219,6 +226,8 @@
           <a
             href="/html/edu-programs-details-page.html?program=mini-startapdzii"
             class="card"
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             <h3>МИНИ СТАРТАПЏИИ</h3>
             <p>Клуб за млади (15 - 18 г.)</p>
@@ -227,7 +236,7 @@
       </section>
 
       <!-- Mid Page CTAs -->
-      <section class="mid-cta">
+      <section class="mid-cta" data-aos="fade-up">
         <div class="mid-cta-buttons">
           <a href="./programs.html" class="btn-main btn-main-secondary"
             >Истражи ги програмите</a
@@ -240,7 +249,7 @@
 
       <!-- Form Section -->
       <section id="form-section">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
           <p>ДА СЕ ЗАПОЗНАЕМЕ</p>
           <h2>Испрати порака и кажи ЗДРАВО!</h2>
           <form action="" class="contact-form" id="contact-form">
@@ -288,7 +297,7 @@
             <div id="successPopup" class="popup">success</div>
           </form>
         </div>
-        <div class="image-container">
+        <div class="image-container" data-aos="fade-left">
           <img
             class="form-graphic"
             src="../assets/images/rectangle-shape.png"
@@ -385,9 +394,19 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../script/hamburger.js"></script>
     <script src="../script/backToTop.js"></script>
     <script src="../script/form Input.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 100
+      });
+    </script>
     <button id="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
   </body>
 </html>
