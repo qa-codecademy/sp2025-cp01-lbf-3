@@ -7,32 +7,37 @@
     margin-bottom: 3rem;
     text-align: center;
   }
-  .cards {
+  .programs-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  .card {
+  .programs-card {
     background: linear-gradient(145deg, #ffffff, #f0f0f0);
     border-radius: 16px;
     padding: 2rem 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
     color: #333;
     text-align: center;
   }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  .programs-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    border-color: #00d1a0;
   }
-  .card h3 {
+  .programs-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
   }
-  .card p {
+  .programs-card p {
     font-size: 1rem;
     color: #555;
   }
@@ -43,5 +48,12 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .mid-cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
   }
  

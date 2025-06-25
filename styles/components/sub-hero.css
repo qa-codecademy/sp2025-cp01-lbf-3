@@ -8,13 +8,13 @@
     font-family: var(--font-main);
         font-size: var(--text-4xl);
         font-weight: var(--fw-semibold);
-        color: var(--text-primary);
+        color: var(--text-inverse);
         line-height: var(--line-tight);
     margin-bottom: 1rem;
   }
   .sub-hero p {
     font-size: var(--text-lg);
-        color: var(--gray-800);
+        color: var(--text-inverse);
     max-width: 600px;
     margin: 0 auto 1.5rem;
   }
