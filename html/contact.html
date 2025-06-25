@@ -62,7 +62,70 @@
         
       </section>
       <main id="main-content">
-     
+    </section>
+    <main id="main-content">
+      <section id="form-section">
+          <div class="container">
+            <p>ДА СЕ ЗАПОЗНАЕМЕ</p>
+            <h2>Испрати порака и кажи ЗДРАВО!</h2>
+            <form action="" class="contact-form" id="contact-form">
+              <div class="input-control">
+                <input
+                  type="text"
+                  placeholder="Име и Презиме"
+                  required
+                  name="fullName"
+                  id="fullName"
+                />
+                <input
+                  type="email"
+                  placeholder="Емаил"
+                  required
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="input-control">
+                <input
+                  type="text"
+                  placeholder="Телефон"
+                  name="phone"
+                  id=""
+                  phone
+                />
+                <input
+                  type="text"
+                  placeholder="Тема"
+                  name="subject"
+                  id="subject"
+                />
+              </div>
+              <textarea
+                name="message"
+                required
+                placeholder="Порака"
+                id="message"
+              ></textarea>
+              <button class="btn-main btn-main-secondary" type="submit">
+                Испрати
+              </button>
+  
+              <div id="successPopup" class="popup">success</div>
+            </form>
+          </div>
+          <div class="image-container">
+            <img
+              class="form-graphic"
+              src="../assets/images/rectangle-shape.png"
+              alt="design-graphic"
+            />
+          </div>
+        </section>
+        <section id="map">
+          <div class="container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 100px; width: 100%;" >
+              <iframe  style="border-radius: 25px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.090774608582!2d21.424805110592168!3d41.99832737110871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354144cae363653%3A0xd7c374f1949b9013!2s1%2C%20Blvd.%20Partizanski%20Odredi%206%2C%20Skopje%201000!5e0!3m2!1sen!2smk!4v1750012455242!5m2!1sen!2smk" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
     </main>
     <footer id="main-footer">
         <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
