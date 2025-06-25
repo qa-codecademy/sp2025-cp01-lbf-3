@@ -1,16 +1,46 @@
 .btn-main {
     display: inline-block;
-    font-weight: var(--fw-regular);
+    font-weight: var(--fw-medium);
     text-align: center;
     vertical-align: middle;
     padding: 0.875rem 1.85rem;
-    font-size: var(--text-lg);
-    font-weight: var(--fw-medium);
+    font-size: var(--text-base);
     line-height: 1.5;
     transition: all 0.15s ease-in-out; 
     cursor: pointer;
     color: var(--white);
     background-color: var(--btn-secondary);
+    border-radius: .1rem;
+}
+
+.btn-pages {
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background-color: var(--primary-dark);
+        box-shadow: 0 0 6px 6px rgba(11, 43, 68, 0.1),             
+        0 2px 0 rgba(11, 43, 68, 0.1);
+        background-color: var(--btn-primary);
+    }
+    
+}
+
+#back-to-top {
+    display: none; 
+    position: fixed; 
+    bottom: 1.5rem; 
+    right: 3rem; 
+    z-index: 1599; 
+    background-color: var(--btn-secondary); 
+    color: white; 
+    border: none; 
+    padding: 1rem 1.3rem; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    transition: all .3s ease-in-out
+}
+
+#back-to-top:hover {
+    background-color: #00a37a; 
 }
 
 .btn-main-primary {

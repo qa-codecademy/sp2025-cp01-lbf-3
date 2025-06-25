@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("hamburger")
     const hamburger = document.querySelector('.hamburger');
     const mainNav = document.querySelector('.main-nav');
     const navBtn = document.getElementById("button");

@@ -1,9 +1,32 @@
+.wave {
+    width: 100%;
+    height: 100px; 
+    display: block;
+    position: absolute;
+    top: 0%;
+}
+.wave path {
+    fill: white
+}
+
 #main-footer {
+    #country {
+        margin-left: 1rem;
+    }
+    position: relative;
     padding-top: 5rem;
     color: white;
+   
+    hr {
+        margin-bottom: 0;
+    }
     p {
         color: #b0b6ef;
         margin-bottom: 1rem;
+    }
+    .copyright {
+        margin-bottom: 0;
+        padding-bottom: 1rem
     }
     background-color: #605fe5;
     .footer-items {
@@ -16,6 +39,9 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+         .footer-logo-img {
+            margin-bottom: -2rem;
+        }
         .footer-logo {
             width: 100%;
             margin: 1rem 0;
@@ -30,7 +56,7 @@
             text-align: center;
             margin-top: 3.5rem;
             h2 {
-                margin-left: -2rem;
+                margin-left: -1rem;
                 margin-bottom: 1rem;
             }
             ul{
@@ -61,7 +87,7 @@
                 span {
                     border-radius: 50%;
                     margin: 0.1rem;
-                    padding: 1rem;
+                    padding: 1rem 1.2rem;
                     background-color: #7d7cea;
                     &:hover {
                         background-color: #7b77ea;
@@ -139,3 +165,12 @@
         }
     }
 }
+
+@media  screen and (min-width: 300px) and (max-width: 1225px) {
+      #main-footer {
+         #country {
+            margin-left: 0;
+        }
+    }
+}
+    

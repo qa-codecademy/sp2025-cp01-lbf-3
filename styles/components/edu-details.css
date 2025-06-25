@@ -1,0 +1,202 @@
+/* === Scoped Educational Program Styles === */
+
+.edu-style {
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  color: var(--text-primary);
+  padding: var(--spacing-lg);
+  margin: var(--spacing-lg) auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative Graphics */
+.edu-style::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../../assets/images/dots-vector.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.edu-style::after {
+  content: '';
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background-image: url('../../assets/images/about-left-desgn-element.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.edu-style .container {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-sm);
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* Headings */
+.edu-style h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-green);
+  text-align: center;
+}
+
+.edu-style h3 {
+  margin-top: var(--spacing-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Paragraphs */
+.edu-style p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+}
+
+/* Image Wrapper */
+.edu-style .edu-image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+  width: 100%;
+}
+
+.edu-style .edu-image-wrapper img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  object-fit: contain;
+  aspect-ratio: auto;
+  max-height: 350px;
+}
+
+/* Primary Button */
+.edu-style .btn-main,
+.edu-style .btn-main-secondary {
+  display: inline-block;
+  margin-top: var(--spacing-lg);
+  margin-bottom: calc(var(--spacing-lg) * 2);
+  padding: 0.8rem 1.6rem;
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.edu-style .btn-main:hover,
+.edu-style .btn-main-secondary:hover {
+  background-color: var(--primary-green-hover);
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .edu-style h1 {
+    font-size: 2rem;
+  }
+  
+  .edu-style .edu-image-wrapper img {
+    max-width: 450px;
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .edu-style {
+    padding: var(--spacing-md);
+  }
+
+  .edu-style h1 {
+    font-size: 1.8rem;
+  }
+
+  .edu-style h3 {
+    font-size: 1rem;
+  }
+
+  .edu-style p {
+    font-size: 0.95rem;
+  }
+
+  .edu-style .edu-image-wrapper img {
+    max-width: 400px;
+    max-height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .edu-style {
+    padding: var(--spacing-sm);
+  }
+
+  .edu-style h1 {
+    font-size: 1.5rem;
+  }
+
+  .edu-style .edu-image-wrapper img {
+    max-width: 100%;
+    aspect-ratio: 4/3;
+  }
+}
+
+.edu-style .back-btn {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: var(--spacing-lg);
+}
+
+.back-btn-wrapper {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.back-btn-wrapper .btn-main {
+  padding: 0.8rem 2rem;
+}
+
+.btn-main {
+  border-radius: var(--radius-sm);
+}
+
+.btn-main-secondary {
+  background-color: var(--btn-secondary);
+}
+
+.btn-main-secondary:hover {
+  box-shadow: 0 0 6px 6px rgba(11, 43, 68, 0.1), 0 2px 0 rgba(11, 43, 68, 0.1);
+  background-color: var(--btn-primary);
+}
+
+/* Optional: Add extra margin below both buttons for spacing */
+.btn-main + .btn-main {
+  margin-top: 0.75rem;
+}

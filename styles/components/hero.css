@@ -25,7 +25,7 @@
     
     h1 {
         font-family: var(--font-main);
-        font-size: var(--text-5xl);
+        font-size: var(--text-4xl);
         font-weight: var(--fw-semibold);
         color: var(--text-primary);
         line-height: var(--line-tight);
@@ -51,8 +51,8 @@
   content: "";
   position: absolute;
   top: -32%; 
-  left: 40%;
-  width: 75vw;
+  left: 30%;
+  width: 70vw;
   height: 90vh; 
   background: url("../../assets/images/vector1.png") no-repeat center top / cover;
   background-size: 100% 100%;
@@ -61,7 +61,7 @@
 
 @media screen and (max-width: 1800px) {
     .hero::before {
-      left: 37%;
+      left: 30%;
     }
   }
 
@@ -74,7 +74,7 @@
 @media screen and  (max-width: 1225px) {
     .hero {
         position: static;
-        height: 70vh;
+        height: auto;
         margin-bottom: 3rem;
     }
   .hero::before {
@@ -95,9 +95,9 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 933px) {
     .hero {
-        width: 100%;
+        width: 90%;
         height: auto;
         margin-bottom: 1rem;
     }

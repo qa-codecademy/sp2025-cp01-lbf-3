@@ -1,4 +1,29 @@
 #form-section {
+    .popup {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px;
+      background-color: var(--secondary-green);
+      color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 1000;
+      opacity: 0.8;
+      animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 0.8;}
+    }
+
+    @keyframes fadeOut {
+      from {opacity: 0.8;}
+      to {opacity: 0;}
+    }
     height: auto;
     margin: 2rem 0;
     text-align: center;

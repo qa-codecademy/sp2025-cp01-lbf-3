@@ -1,0 +1,159 @@
+
+.speakers {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+
+.speakers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+
+.speaker-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.speaker-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+.speaker-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  object-fit: cover;
+  border: 3px solid #eaeaea;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.speaker-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+
+.speaker-card .role {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+
+.speaker-card .title {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+
+.speaker-card:focus-within {
+  outline: 2px solid #0078d4;
+  outline-offset: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .speakers-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .speaker-card {
+    padding: 20px 14px;
+  }
+
+  .speaker-card img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .speaker-card h3 {
+    font-size: 1.05rem;
+  }
+
+  .speaker-card .role,
+  .speaker-card .title {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 716px) and (max-width: 768px) {
+  .speakers-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .speakers-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+  }
+
+  .speaker-card {
+    min-width: 230px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .speaker-card img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .section-title {
+    font-size: clamp(1.4rem, 5vw, 1.6rem);
+  }
+}
+
+
+@media (max-width: 350px) {
+  .speaker-card {
+    min-width: 200px;
+    padding: 16px 12px;
+  }
+
+  .speaker-card h3 {
+    font-size: 1rem;
+  }
+
+  .speaker-card .role,
+  .speaker-card .title {
+    font-size: 0.85rem;
+  }
+}
