@@ -176,7 +176,7 @@
 .back-btn-wrapper {
   text-align: center;
   margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 7rem; /* Slightly increased for more separation from the footer */
 }
 
 .back-btn-wrapper .btn-main {
@@ -199,4 +199,25 @@
 /* Optional: Add extra margin below both buttons for spacing */
 .btn-main + .btn-main {
   margin-top: 0.75rem;
+}
+
+#program-details p + .btn-main,
+#program-details p + .btn-main-secondary {
+  margin-top: 0.5rem;
+}
+
+#program-details .btn-main,
+#program-details .btn-main-secondary {
+  margin-bottom: 0.5rem;
+}
+
+#program-details .edu-image-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  display: block;
 }

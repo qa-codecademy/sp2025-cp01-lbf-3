@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <p>${details.format}</p>
       <h3>👩‍🏫 Предавач</h3>
       <p>${details.teacher}</p>
-      <a href="${details.teacherBio}" class="btn-main btn-main-secondary" style="margin-bottom:1rem;">Повеќе за предавачот</a>
+      <a href="${details.teacherBio}" class="btn-main btn-main-secondary">Повеќе за предавачот</a>
       <h3>💰 Цена</h3>
       <p>${details.price}</p>
       <a href="/html/contact.html" class="btn-main btn-main-secondary">Запиши се →</a>
