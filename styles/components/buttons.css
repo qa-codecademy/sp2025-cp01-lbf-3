@@ -3,14 +3,15 @@
     font-weight: var(--fw-medium);
     text-align: center;
     vertical-align: middle;
-    padding: 0.875rem 1.85rem;
+    padding: 0.75rem 1.5rem;
     font-size: var(--text-base);
     line-height: 1.5;
     transition: all 0.15s ease-in-out; 
     cursor: pointer;
+    max-width: 15rem;
     color: var(--white);
     background-color: var(--btn-secondary);
-    border-radius: .1rem;
+    border-radius: 2rem;
 }
 
 .btn-pages {

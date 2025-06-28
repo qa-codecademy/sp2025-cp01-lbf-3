@@ -25,10 +25,7 @@
       crossorigin="anonymous"
     />
     <!-- font awesome for icons  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,7 +58,7 @@
     <header id="main-header">
       <div class="container flex">
         <a href="./index.html">
-          <img src="../assets/images/LogoSmall.png" alt="" class="logo" />
+          <img src="../assets/images/LogoSmall.png" alt="logo" width="150" class="logo" />
         </a>
         <!-- Hamburger Icon -->
         <div class="hamburger">
@@ -206,20 +203,39 @@
 
 
          <section class="testimonial-section">
-    <p class="label">СВЕДОШТВА</p>
-    <h2 class="title">Успешни Сведоштва</h2>
-    
-    
-    <div class="testimonial-card">
-      <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
-      <h3 class="name">Chris Tucked</h3>
-      <p class="text">
-       „Долги години се соочував со предизвици и сомнежи, но никогаш не се откажав од своите цели. Благодарение на посветеноста и поддршката што ја добив, денес сум тука – исполнет, мотивиран и подготвен за нови успеси. Секоја пречка беше лекција, а секој пад – чекор напред.“
-      </p>
-      <div class="stars">
-        ★ ★ ★ ★ ★
-      </div>
-    </section>
+            <p class="label">СВЕДОШТВА</p>
+            <h2 class="title">Успешни Сведоштва</h2>
+            <div class="testimonial-carousel">
+              <div class="testimonial-card active">
+                <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
+                <h3 class="name">Chris Tucked</h3>
+                <p class="text">
+                  „Долги години се соочував со предизвици и сомнежи, но никогаш не се откажав од своите цели. Благодарение на посветеноста и поддршката што ја добив, денес сум тука – исполнет, мотивиран и подготвен за нови успеси. Секоја пречка беше лекција, а секој пад – чекор напред.“
+                </p>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+              <div class="testimonial-card">
+                <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
+                <h3 class="name">Ana Petrova</h3>
+                <p class="text">
+                  „Програмата ми помогна да стекнам нови вештини и самодоверба. Инструкторите беа секогаш тука за поддршка и инспирација. Сега верувам во себе и во моите можности.“
+                </p>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+              <div class="testimonial-card">
+                <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
+                <h3 class="name">Marko Iliev</h3>
+                <p class="text">
+                  „Одлично искуство! Се запознав со многу нови пријатели и научив како да работам во тим. Секоја сесија беше забавна и едукативна.“
+                </p>
+                <div class="stars">★ ★ ★ ★ ★</div>
+              </div>
+            </div>
+            <div class="navigation">
+              <button class="nav-btn prev-btn" aria-label="Претходно"><i class="fa fa-chevron-left"></i></button>
+              <button class="nav-btn next-btn" aria-label="Следно"><i class="fa fa-chevron-right"></i></button>
+            </div>
+          </section>
 
       
 
@@ -328,6 +344,7 @@
         </div>
       </section>
     </main>
+    <script src="../script/index.js"></script>
     <footer id="main-footer">
       <svg
         class="wave"
@@ -345,14 +362,14 @@
       <div class="container footer-items">
         <div class="footer-logo">
           <div class="footer-logo-img">
-            <img src="../assets/images/LogoSmall.png" alt="" class="logo" />
+            <a href="./index.html"><img width="150px" src="../assets/images/LogoSmall.png" alt="logo" class="logo"></a>
           </div>
           <p>Бизнис академија за деца и тинејџери</p>
           <p>Ние не ја предвидуваме иднината - ние ја создаваме.</p>
         </div>
         <div class="footer-menu">
           <h2>Линкови</h2>
-          <ul class="">
+          <ul class="link-list">
             <li class="menu-item">
               <a href="./index.html" class="menu-link">Дома</a>
             </li>
@@ -391,15 +408,9 @@
             <span><i class="fa-solid fa-phone"></i> &nbsp</span>+389(0)70800651
           </p>
           <div class="socials">
-            <span
-              ><i><i class="fa-brands fa-facebook"></i></i
-            ></span>
-            <span
-              ><i><i class="fa-brands fa-twitter"></i></i
-            ></span>
-            <span
-              ><i><i class="fa-brands fa-instagram"></i></i
-            ></span>
+              <span><i class="fa-brands fa-facebook"></i></span>
+              <span><i class="fa-brands fa-x-twitter"></i></span>
+              <span><i class="fa-brands fa-instagram"></i></span>
           </div>
         </div>
       </div>

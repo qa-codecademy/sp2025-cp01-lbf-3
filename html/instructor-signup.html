@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LBF | Contact</title> 
+    <title>LBF | Instructors</title> 
     <link rel="icon" href="../assets/images/favicon-32x32.png" type="image/png">
     <meta name="description" content="Learn more about the services offered by LBF, including personalized training programs, expert coaching, and community support.">
     <meta name="keywords" content="LBF, services, training programs, coaching, community support">
@@ -25,15 +25,19 @@
      <link rel="stylesheet" href="../styles/layout/container.css">
      <link rel="stylesheet" href="../styles/components/pages-nav.css">
      <link rel="stylesheet" href="../styles/components/buttons.css">
-     <link rel="stylesheet" href="../styles/components/pages-hero.css">
      <link rel="stylesheet" href="../styles/components/form.css">
      <link rel="stylesheet" href="../styles/components/footer.css">
+
+        <link rel="stylesheet" href="../styles/components/leadspeakers.css">
+    <link rel="stylesheet" href="../styles/components/guestspeakers.css">
+
+
   </head>
   <body>
     <header id="main-header" data-aos="fade-down">
         <div class="container flex ">
             <a href="./index.html">
-                <img src="../assets/images/LogoSmall.png" alt="logo" width="150" class="logo">
+               <img src="../assets/images/LogoSmall.png" alt="logo" width="150" class="logo">
             </a>
             <!-- Hamburger Icon -->
             <div class="hamburger">
@@ -46,83 +50,77 @@
                 <li class="menu-item "><a href="./about.html" >За нас</a></li>
                 <li class="menu-item"><a href="./methodology.html" >Методологија</a></li>
                 <li class="menu-item"><a href="./programs.html" >Програми</a></li>
-                <li class="menu-item"><a href="./instructors.html" >Предавачи</a></li>
+                <li class="menu-item link-active"><a href="./instructors.html" >Предавачи</a></li>
                 <li class="menu-item"><a href="./services.html" >Услуги</a></li>
-                <li class="menu-item "><a id="button" class="btn-main btn-pages" style="text-decoration: underline;" href="./contact.html" >Контакт</a></li>
+                <li class="menu-item"><a id="button" class="btn-main btn-pages" href="./contact.html" >Контакт</a></li>
             </ul>
         </div>
         <div class="breadcrumbs-container" data-aos="fade-right">
-            <h1>Контакт</h1>
+            <h1>Гости Предавачи</h1>
         </div>
     </header>
       <section class="pages-hero" data-aos="fade-up">
         
       </section>
       <main id="main-content" data-aos="fade-up">
-    </section>
-    <main id="main-content">
-      <section id="form-section" data-aos="fade-up">
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <p>ДА СЕ ЗАПОЗНАЕМЕ</p>
-            <h2>Испрати порака и кажи ЗДРАВО!</h2>
-            <form action="" class="contact-form" id="contact-form" data-aos="zoom-in" data-aos-delay="200">
-              <div class="input-control">
-                <input
-                  type="text"
-                  placeholder="Име и Презиме"
-                  required
-                  name="fullName"
-                  id="fullName"
-                />
-                <input
-                  type="email"
-                  placeholder="Емаил"
-                  required
-                  name="email"
-                  id="email"
-                />
-              </div>
-              <div class="input-control">
-                <input
-                  type="text"
-                  placeholder="Телефон"
-                  name="phone"
-                  id=""
-                  phone
-                />
-                <input
-                  type="text"
-                  placeholder="Тема"
-                  name="subject"
-                  id="subject"
-                />
-              </div>
-              <textarea
-                name="message"
+
+        <section id="form-section">
+        <div class="container" data-aos="fade-up">
+          <p>Пријави се за гостин предавач</p>
+          <h2>Испрати порака и кажи ни за себе!</h2>
+          <form action="" class="contact-form" id="contact-form">
+            <div class="input-control">
+              <input
+                type="text"
+                placeholder="Име и Презиме"
                 required
-                placeholder="Порака"
-                id="message"
-              ></textarea>
-              <button class="btn-main btn-main-secondary" type="submit">
-                Испрати
-              </button>
-  
-              <div id="successPopup" class="popup">success</div>
-            </form>
-          </div>
-          <div class="image-container" data-aos="fade-left" data-aos-delay="300">
-            <img
-              class="form-graphic"
-              src="../assets/images/rectangle-shape.png"
-              alt="design-graphic"
-            />
-          </div>
-        </section>
-        <section id="map" data-aos="fade-up" data-aos-delay="400">
-          <div class="container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 100px; width: 100%;" data-aos="fade-up" data-aos-delay="500">
-              <iframe  style="border-radius: 25px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.090774608582!2d21.424805110592168!3d41.99832737110871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1354144cae363653%3A0xd7c374f1949b9013!2s1%2C%20Blvd.%20Partizanski%20Odredi%206%2C%20Skopje%201000!5e0!3m2!1sen!2smk!4v1750012455242!5m2!1sen!2smk" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </section>
+                name="fullName"
+                id="fullName"
+              />
+              <input
+                type="email"
+                placeholder="Емаил"
+                required
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="input-control">
+              <input
+                type="text"
+                placeholder="Телефон"
+                name="phone"
+                id="phone"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Предмет"
+                name="subject"
+                id="subject"
+              />
+            </div>
+            <textarea
+              name="message"
+              required
+              placeholder="Каши ни нешто повеќе за себе и твоето искуство"
+              id="message"
+            ></textarea>
+            <button class="btn-main btn-main-secondary" type="submit">
+              Испрати
+            </button>
+
+            <div id="successPopup" class="popup">success</div>
+          </form>
+        </div>
+        <div class="image-container" data-aos="fade-left">
+          <img
+            class="form-graphic"
+            src="../assets/images/rectangle-shape.png"
+            alt="design-graphic"
+          />
+        </div>
+      </section>
     </main>
     <footer id="main-footer" data-aos="fade-up">
         <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -141,8 +139,9 @@
             <div class="footer-menu">
                 <h2>Линкови</h2>
                 <ul class="">
-                    <li class="menu-item"><a href="./index.html" class="menu-link">Дома</a></li>
+                   <li class="menu-item"><a href="./index.html" class="menu-link">Дома</a></li>
                     <li class="menu-item"><a href="./about.html" class="menu-link">За нас</a></li>
+                    <li class="menu-item"><a href="./methodology.html" >Методологија</a></li>
                     <li class="menu-item"><a href="./programs.html" class="menu-link">Програми</a></li>
                     <li class="menu-item"><a href="./instructors.html" class="menu-link">Предавачи</a></li>
                     <li class="menu-item"><a href="./services.html" class="menu-link">Услуги</a></li>
@@ -155,9 +154,9 @@
                <p><span><i class="fa-solid fa-location-dot"></i>&nbsp;</span>Бул. Партизански Одреди 6/1 Скопје, Северна <span id="country">Македонија</span></p>
                 <p><span><i class="fa-solid fa-phone"></i> &nbsp</span>+389(0)70800651</p>
                 <div class="socials">
-                  <span><i class="fa-brands fa-facebook"></i></span>
-                  <span><i class="fa-brands fa-x-twitter"></i></span>
-                  <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-x-twitter"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
                 </div>
             </div>
         </div>

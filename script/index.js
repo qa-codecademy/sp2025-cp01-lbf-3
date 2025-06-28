@@ -15,6 +15,34 @@ document.addEventListener('DOMContentLoaded', function() {
     initHeroAnimations();
     initServiceCardHover();
     initSmoothScrolling();
+
+    // Testimonial Carousel Logic
+    const carousel = document.querySelector('.testimonial-carousel');
+    const cards = carousel ? carousel.querySelectorAll('.testimonial-card') : [];
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let current = 0;
+
+    function showCard(index) {
+        cards.forEach((card, i) => {
+            card.classList.toggle('active', i === index);
+            card.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    if (cards.length > 0) {
+        showCard(current);
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', function() {
+                current = (current - 1 + cards.length) % cards.length;
+                showCard(current);
+            });
+            nextBtn.addEventListener('click', function() {
+                current = (current + 1) % cards.length;
+                showCard(current);
+            });
+        }
+    }
 });
 
 // ===== HERO SECTION ANIMATIONS =====

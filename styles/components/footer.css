@@ -83,7 +83,7 @@
                 margin-bottom: 1rem
             }
             .socials {
-                margin-top: 2rem;
+                margin: 2rem auto;
                 span {
                     border-radius: 50%;
                     margin: 0.1rem;

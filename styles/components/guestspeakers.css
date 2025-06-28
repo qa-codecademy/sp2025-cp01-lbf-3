@@ -81,6 +81,10 @@
   outline-offset: 4px;
 }
 
+.cta-instructors {
+  margin-top: 40px;
+}
+
 
 @media (max-width: 768px) {
   .speakers-container {
