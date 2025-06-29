@@ -56,34 +56,39 @@
   </head>
   <body>
     <header id="main-header">
-      <div class="container flex">
+      <div class="container header-flex">
         <a href="./index.html">
           <img src="../assets/images/LogoSmall.png" alt="logo" width="150" class="logo" />
         </a>
-        <!-- Hamburger Icon -->
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <nav class="main-nav-wrapper">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="main-nav">
+            <li class="menu-item link-active"><a href="./index.html">Дома</a></li>
+            <li class="menu-item"><a href="./about.html">За нас</a></li>
+            <li class="menu-item"><a href="./methodology.html">Методологија</a></li>
+            <li class="menu-item"><a href="./programs.html">Програми</a></li>
+            <li class="menu-item"><a href="./instructors.html">Предавачи</a></li>
+            <li class="menu-item"><a href="./services.html">Услуги</a></li>
+            <li class="menu-item"><a id="button" class="btn-main btn-main-secondary" href="./contact.html">Контакт</a></li>
+          </ul>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-flag-btn" id="lang-flag-btn" aria-label="Select language">
+            <img class="lang-flag" src="../assets/images/mk-flag.png" alt="Macedonian Flag" id="current-flag">
+          </button>
+          <div class="lang-menu" id="lang-menu">
+            <button class="lang-option" data-lang="mk">
+              <img src="../assets/images/mk-flag.png" alt="MK"> MK
+            </button>
+            <button class="lang-option" data-lang="al">
+              <img src="../assets/images/al-flag.png" alt="AL"> AL
+            </button>
+          </div>
         </div>
-        <ul class="main-nav flex hide">
-          <li class="menu-item link-active"><a href="./index.html">Дома</a></li>
-          <li class="menu-item"><a href="./about.html">За нас</a></li>
-          <li class="menu-item">
-            <a href="./methodology.html">Методологија</a>
-          </li>
-          <li class="menu-item"><a href="./programs.html">Програми</a></li>
-          <li class="menu-item"><a href="./instructors.html">Предавачи</a></li>
-          <li class="menu-item"><a href="./services.html">Услуги</a></li>
-          <li class="menu-item">
-            <a
-              id="button"
-              class="btn-main btn-main-secondary"
-              href="./contact.html"
-              >Контакт</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
     <section class="hero">
@@ -202,33 +207,12 @@
         </section>
 
 
-         <section class="testimonial-section">
+         <section class="testimonial-section" data-aos="fade-up">
             <p class="label">СВЕДОШТВА</p>
             <h2 class="title">Успешни Сведоштва</h2>
             <div class="testimonial-carousel">
-              <div class="testimonial-card active">
-                <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
-                <h3 class="name">Chris Tucked</h3>
-                <p class="text">
-                  „Долги години се соочував со предизвици и сомнежи, но никогаш не се откажав од своите цели. Благодарение на посветеноста и поддршката што ја добив, денес сум тука – исполнет, мотивиран и подготвен за нови успеси. Секоја пречка беше лекција, а секој пад – чекор напред.“
-                </p>
-                <div class="stars">★ ★ ★ ★ ★</div>
-              </div>
               <div class="testimonial-card">
-                <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
-                <h3 class="name">Ana Petrova</h3>
-                <p class="text">
-                  „Програмата ми помогна да стекнам нови вештини и самодоверба. Инструкторите беа секогаш тука за поддршка и инспирација. Сега верувам во себе и во моите можности.“
-                </p>
-                <div class="stars">★ ★ ★ ★ ★</div>
-              </div>
-              <div class="testimonial-card">
-                <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
-                <h3 class="name">Marko Iliev</h3>
-                <p class="text">
-                  „Одлично искуство! Се запознав со многу нови пријатели и научив како да работам во тим. Секоја сесија беше забавна и едукативна.“
-                </p>
-                <div class="stars">★ ★ ★ ★ ★</div>
+                <div class="card-content"></div>
               </div>
             </div>
             <div class="navigation">

@@ -605,3 +605,18 @@
         padding: 1rem !important;
     }
 }
+
+.breadcrumbs-container {
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 0.25rem;
+}
+.breadcrumbs-container h1 {
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}

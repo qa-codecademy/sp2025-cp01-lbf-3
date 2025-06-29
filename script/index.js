@@ -18,30 +18,126 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Testimonial Carousel Logic
     const carousel = document.querySelector('.testimonial-carousel');
-    const cards = carousel ? carousel.querySelectorAll('.testimonial-card') : [];
+    const card = carousel ? carousel.querySelector('.testimonial-card') : null;
+    const cardContent = card ? card.querySelector('.card-content') : null;
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     let current = 0;
 
-    function showCard(index) {
-        cards.forEach((card, i) => {
-            card.classList.toggle('active', i === index);
-            card.style.display = i === index ? 'block' : 'none';
-        });
+    // Array of testimonials
+    const testimonials = [
+      {
+        avatar: '/assets/images/60111.jpg',
+        name: 'Chris Tucked',
+        text: '„Долги години се соочував со предизвици и сомнежи, но никогаш не се откажав од своите цели. Благодарение на посветеноста и поддршката што ја добив, денес сум тука – исполнет, мотивиран и подготвен за нови успеси. Секоја пречка беше лекција, а секој пад – чекор напред.“',
+        stars: 5
+      },
+      {
+        avatar: '/assets/images/60111.jpg',
+        name: 'Ana Petrova',
+        text: '„Програмата ми помогна да стекнам нови вештини и самодоверба. Инструкторите беа секогаш тука за поддршка и инспирација. Сега верувам во себе и во моите можности.“',
+        stars: 5
+      },
+      {
+        avatar: '/assets/images/60111.jpg',
+        name: 'Marko Iliev',
+        text: '„Одлично искуство! Се запознав со многу нови пријатели и научив како да работам во тим. Секоја сесија беше забавна и едукативна.“',
+        stars: 5
+      }
+    ];
+
+    function renderTestimonial(index) {
+      if (!cardContent) return;
+      cardContent.style.opacity = '0';
+      cardContent.style.visibility = 'hidden';
+      const t = testimonials[index];
+      cardContent.innerHTML = `
+        <img src="${t.avatar}" alt="Avatar" class="avatar">
+        <h3 class="name">${t.name}</h3>
+        <p class="text">${t.text}</p>
+        <div class="stars">${'★ '.repeat(t.stars).trim()}</div>
+      `;
     }
 
-    if (cards.length > 0) {
-        showCard(current);
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', function() {
-                current = (current - 1 + cards.length) % cards.length;
-                showCard(current);
-            });
-            nextBtn.addEventListener('click', function() {
-                current = (current + 1) % cards.length;
-                showCard(current);
-            });
-        }
+    function fadeInCardContent() {
+      if (!cardContent) return;
+      setTimeout(() => {
+        cardContent.style.visibility = 'visible';
+        cardContent.style.opacity = '1';
+      }, 50);
+    }
+
+    if (card && cardContent) {
+      renderTestimonial(current);
+      fadeInCardContent();
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+          current = (current - 1 + testimonials.length) % testimonials.length;
+          carousel.classList.add('flipping');
+          cardContent.style.opacity = '0';
+          cardContent.style.visibility = 'hidden';
+          setTimeout(() => {
+            carousel.classList.remove('flipping');
+            renderTestimonial(current);
+            fadeInCardContent();
+          }, 600);
+        });
+        nextBtn.addEventListener('click', function() {
+          current = (current + 1) % testimonials.length;
+          carousel.classList.add('flipping');
+          cardContent.style.opacity = '0';
+          cardContent.style.visibility = 'hidden';
+          setTimeout(() => {
+            carousel.classList.remove('flipping');
+            renderTestimonial(current);
+            fadeInCardContent();
+          }, 600);
+        });
+      }
+    }
+
+    // Language Switcher Logic
+    const langFlagBtn = document.getElementById('lang-flag-btn');
+    const langMenu = document.getElementById('lang-menu');
+    const langFlag = document.getElementById('current-flag');
+    const langOptions = document.querySelectorAll('.lang-option');
+    const navHamburger = document.querySelector('.nav-hamburger');
+    const mainNav = document.querySelector('.main-nav');
+
+    // Toggle nav on mobile
+    if (navHamburger && mainNav) {
+      navHamburger.addEventListener('click', function(e) {
+        mainNav.classList.toggle('open');
+        e.stopPropagation();
+      });
+      document.addEventListener('click', function() {
+        mainNav.classList.remove('open');
+      });
+    }
+
+    // Toggle language menu
+    if (langFlagBtn && langMenu && langFlag && langOptions.length) {
+      langFlagBtn.addEventListener('click', function(e) {
+        langMenu.classList.toggle('active');
+        e.stopPropagation();
+      });
+      document.addEventListener('click', function() {
+        langMenu.classList.remove('active');
+      });
+      langOptions.forEach(option => {
+        option.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const lang = this.getAttribute('data-lang');
+          if (lang === 'mk') {
+            langFlag.src = '../assets/images/mk-flag.png';
+            langFlag.alt = 'Macedonian Flag';
+          } else if (lang === 'al') {
+            langFlag.src = '../assets/images/al-flag.png';
+            langFlag.alt = 'Albanian Flag';
+          }
+          langMenu.classList.remove('active');
+        });
+      });
     }
 });
 
