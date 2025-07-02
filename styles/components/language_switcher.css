@@ -1,0 +1,221 @@
+/* Language Switcher Styles */
+.lang-switcher {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1499;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Desktop view */
+@media screen and (min-width: 1225px) {
+  .lang-switcher {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1499;
+  }
+
+  .lang-flag-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.625rem);
+    min-width: 3.75rem;
+    justify-content: center;
+  }
+
+  .lang-flag-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.125rem);
+  }
+
+  .lang-flag-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.1875rem rgba(74, 144, 226, 0.3);
+  }
+
+  .lang-flag {
+    width: 1.5rem;
+    height: 1.125rem;
+    object-fit: cover;
+    border-radius: 0.1875rem;
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.2);
+  }
+
+  .lang-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(0.625rem);
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.625rem);
+    transition: all 0.3s ease;
+    min-width: 7.5rem;
+  }
+
+  .lang-switcher:hover .lang-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .lang-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #333;
+    text-align: left;
+  }
+
+  .lang-option:hover {
+    background: rgba(74, 144, 226, 0.1);
+    color: #4a90e2;
+  }
+
+  .lang-option:focus {
+    outline: none;
+    background: rgba(74, 144, 226, 0.1);
+    color: #4a90e2;
+  }
+
+  .lang-option img {
+    width: 1.25rem;
+    height: 0.9375rem;
+    object-fit: cover;
+    border-radius: 0.125rem;
+    box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Mobile/Tablet view */
+@media screen and (max-width: 1224px) {
+  .lang-switcher {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 1499;
+  }
+
+  .lang-flag-btn {
+    padding: 0.375rem 0.625rem;
+    min-width: 3.125rem;
+  }
+
+  .lang-flag {
+    width: 1.25rem;
+    height: 0.9375rem;
+  }
+
+  .lang-menu {
+    margin-top: 0.375rem;
+    min-width: 6.25rem;
+  }
+
+  .lang-option {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+
+  .lang-option img {
+    width: 1.125rem;
+    height: 0.8125rem;
+  }
+}
+
+/* Add a subtle arrow indicator */
+.lang-flag-btn::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #666;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.lang-switcher:hover .lang-flag-btn::after {
+  transform: rotate(180deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .lang-switcher {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .lang-flag-btn {
+    padding: 6px 10px;
+  }
+  
+  .lang-flag {
+    width: 20px;
+    height: 15px;
+  }
+  
+  .lang-menu {
+    min-width: 100px;
+  }
+  
+  .lang-option {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+  .lang-flag-btn {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+  
+  .lang-flag-btn:hover {
+    background: rgba(40, 40, 40, 1);
+  }
+  
+  .lang-flag-btn::after {
+    border-top-color: #ccc;
+  }
+  
+  .lang-menu {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .lang-option {
+    color: #fff;
+  }
+  
+  .lang-option:hover {
+    background: rgba(74, 144, 226, 0.2);
+  }
+}

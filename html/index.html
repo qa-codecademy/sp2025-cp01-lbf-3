@@ -35,6 +35,8 @@
     />
     <!-- AOS for scroll animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <!-- custom styles -->
     <!-- variables first then reset then layout and components and lastly page specific styles -->
     <link rel="stylesheet" href="../styles/core/variables.css" />
@@ -44,6 +46,7 @@
     <link rel="stylesheet" href="../styles/components/main-nav.css" />
     <link rel="stylesheet" href="../styles/components/buttons.css" />
     <link rel="stylesheet" href="../styles/components/hero.css" />
+    <link rel="stylesheet" href="../styles/components/language_switcher.css" />
     <link rel="stylesheet" href="../styles/components/sub-hero.css" />
     <link rel="stylesheet" href="../styles/components/about.css" />
     <link rel="stylesheet" href="../styles/components/programs.css" />
@@ -55,6 +58,19 @@
 
   </head>
   <body>
+    <div class="lang-switcher">
+          <button class="lang-flag-btn" id="lang-flag-btn" aria-label="Select language">
+            <img class="lang-flag" src="../assets/images/mk-flag.png" alt="Macedonian Flag" id="current-flag">
+          </button>
+          <div class="lang-menu" id="lang-menu">
+            <button class="lang-option" data-lang="mk">
+              <img src="../assets/images/mk-flag.png" alt="MK"> MK
+            </button>
+            <button class="lang-option" data-lang="al">
+              <img src="../assets/images/al-flag.png" alt="AL"> AL
+            </button>
+          </div>
+        </div>
     <header id="main-header">
       <div class="container flex">
         <a href="./index.html">
@@ -206,7 +222,7 @@
             <p class="label">СВЕДОШТВА</p>
             <h2 class="title">Успешни Сведоштва</h2>
             <div class="testimonial-carousel">
-              <div class="testimonial-card active">
+              <div class="testimonial-card">
                 <img src="/assets/images/60111.jpg" alt="Avatar" class="avatar">
                 <h3 class="name">Chris Tucked</h3>
                 <p class="text">

@@ -1,6 +1,6 @@
 // ===== INDEX PAGE JAVASCRIPT =====
 
-// Initialize AOS (Animate On Scroll)
+/// Initialize AOS (Animate On Scroll)
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS with custom settings
     AOS.init({
@@ -11,40 +11,155 @@ document.addEventListener('DOMContentLoaded', function() {
         delay: 0
     });
 
-    // Initialize other interactive features
-    initHeroAnimations();
-    initServiceCardHover();
-    initSmoothScrolling();
+    // Initialize testimonial carousel
+    initTestimonialCarousel();
+});
 
-    // Testimonial Carousel Logic
+function initTestimonialCarousel() {
     const carousel = document.querySelector('.testimonial-carousel');
     const cards = carousel ? carousel.querySelectorAll('.testimonial-card') : [];
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
-    let current = 0;
+    
+    if (!carousel || cards.length === 0) {
+        console.log('Carousel not found or no cards available');
+        return;
+    }
 
-    function showCard(index) {
-        cards.forEach((card, i) => {
-            card.classList.toggle('active', i === index);
-            card.style.display = i === index ? 'block' : 'none';
+    let current = 0; // Start with first card (index 0)
+
+    console.log('Initializing carousel with', cards.length, 'cards');
+
+    // Initialize carousel state
+    function setupInitialState() {
+        // Hide all cards first
+        cards.forEach((card, index) => {
+            card.classList.remove('active');
+            card.style.opacity = '0';
+            card.style.transform = 'translateX(100%)';
+            card.style.position = 'absolute';
+            card.style.top = '0';
+            card.style.left = '0';
+            card.style.width = '100%';
         });
+
+        // Show first card
+        const firstCard = cards[0];
+        firstCard.classList.add('active');
+        firstCard.style.opacity = '1';
+        firstCard.style.transform = 'translateX(0)';
+        
+        console.log('Initial card set to:', firstCard.querySelector('.name').textContent);
     }
 
-    if (cards.length > 0) {
-        showCard(current);
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', function() {
-                current = (current - 1 + cards.length) % cards.length;
-                showCard(current);
-            });
-            nextBtn.addEventListener('click', function() {
-                current = (current + 1) % cards.length;
-                showCard(current);
-            });
+    // Animate card transition
+    function animateTransition(fromCard, toCard, direction = 'next') {
+        console.log('Animating from', fromCard.querySelector('.name').textContent, 'to', toCard.querySelector('.name').textContent);
+        
+        // Set up the incoming card position
+        const startX = direction === 'next' ? '100%' : '-100%';
+        const endX = direction === 'next' ? '-100%' : '100%';
+        
+        toCard.style.opacity = '0';
+        toCard.style.transform = `translateX(${startX})`;
+        
+        // Start animation
+        let progress = 0;
+        const duration = 600; // 600ms
+        const startTime = performance.now();
+        
+        function animate(currentTime) {
+            progress = Math.min((currentTime - startTime) / duration, 1);
+            const easeProgress = easeInOut(progress);
+            
+            // Animate outgoing card
+            fromCard.style.opacity = 1 - easeProgress;
+            fromCard.style.transform = `translateX(${easeProgress * (direction === 'next' ? -100 : 100)}%)`;
+            
+            // Animate incoming card
+            toCard.style.opacity = easeProgress;
+            toCard.style.transform = `translateX(${(1 - easeProgress) * (direction === 'next' ? 100 : -100)}%)`;
+            
+            if (progress < 1) {
+                requestAnimationFrame(animate);
+            } else {
+                // Animation complete
+                fromCard.classList.remove('active');
+                toCard.classList.add('active');
+                
+                // Reset positions
+                fromCard.style.transform = `translateX(${endX})`;
+                toCard.style.transform = 'translateX(0)';
+            }
         }
+        
+        requestAnimationFrame(animate);
     }
-});
 
+    // Easing function
+    function easeInOut(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    }
+
+    function slideToNext() {
+        if (cards.length <= 1) return;
+        
+        const currentCard = cards[current];
+        const nextIndex = (current + 1) % cards.length;
+        const nextCard = cards[nextIndex];
+        
+        animateTransition(currentCard, nextCard, 'next');
+        current = nextIndex;
+        
+        console.log('Moved to card index:', current);
+    }
+
+    function slideToPrev() {
+        if (cards.length <= 1) return;
+        
+        const currentCard = cards[current];
+        const prevIndex = (current - 1 + cards.length) % cards.length;
+        const prevCard = cards[prevIndex];
+        
+        animateTransition(currentCard, prevCard, 'prev');
+        current = prevIndex;
+        
+        console.log('Moved to card index:', current);
+    }
+
+    // Set up event listeners
+    if (nextBtn) {
+        nextBtn.addEventListener('click', slideToNext);
+        console.log('Next button listener added');
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', slideToPrev);
+        console.log('Prev button listener added');
+    }
+
+    // Initialize the carousel
+    setupInitialState();
+
+    // Optional: Auto-advance carousel every 5 seconds
+    // setInterval(slideToNext, 5000);
+}
+
+// Helper functions (stubs for the missing functions)
+function initHeroAnimations() {
+    // Add hero animations if needed
+    console.log('Hero animations initialized');
+}
+
+function initServiceCardHover() {
+    // Add service card hover effects if needed
+    console.log('Service card hover effects initialized');
+}
+
+function initSmoothScrolling() {
+    // Add smooth scrolling if needed
+    console.log('Smooth scrolling initialized');
+}
 // ===== HERO SECTION ANIMATIONS =====
 function initHeroAnimations() {
     const heroImage = document.querySelector('.hero-image img');
